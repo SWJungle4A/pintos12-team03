@@ -14,6 +14,12 @@ void process_activate (struct thread *next);
 void argument_stack(char **, int, struct intr_frame *);
 struct thread *get_child_process(int);
 void remove_child_process(struct thread *);
-
+struct aux_t // project_3_수정 => segment로 한 이유는?
+{
+    struct file *file;
+    size_t page_read_bytes;
+    size_t page_zero_bytes;
+    off_t ofs;
+};
 
 #endif /* userprog/process.h */
